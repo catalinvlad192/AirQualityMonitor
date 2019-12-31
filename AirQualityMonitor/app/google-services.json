@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "993463968358",
+    "firebase_url": "https://airqualitymonitor-d2ca3.firebaseio.com",
+    "project_id": "airqualitymonitor-d2ca3",
+    "storage_bucket": "airqualitymonitor-d2ca3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:993463968358:android:c2a83d6cd9c435dd8a83a7",
+        "android_client_info": {
+          "package_name": "com.example.airqualitymonitor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "993463968358-ftklfuc7g0h45mdld6u470rqmnkuprl3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.airqualitymonitor",
+            "certificate_hash": "37d8ce0d77f71db2dc5bd227725754c9887eae26"
+          }
+        },
+        {
+          "client_id": "993463968358-9de9ojoe27j245q1gi7dh9q12fn9t4r6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjDL-L9ATHrewzLYF3vN9CrdH_iAEoFD4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "993463968358-9de9ojoe27j245q1gi7dh9q12fn9t4r6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
