@@ -4,6 +4,7 @@ import androidx.fragment.app.FragmentActivity;
 import android.app.Dialog;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import com.example.airqualitymonitor.db.model.DbEntry;
 import com.google.android.gms.maps.GoogleMap;
@@ -60,9 +61,8 @@ public class GoogleMapActivity extends FragmentActivity implements OnMapReadyCal
                         TextView pressure;
                         TextView temperature;
                         TextView gas;
-                        TextView altitude;
                         TextView lastTimeUpdated;
-                        TextView iaq;
+                        ProgressBar progressBar;
 
                         dialog.setContentView(R.layout.custompopup);
 
@@ -72,9 +72,8 @@ public class GoogleMapActivity extends FragmentActivity implements OnMapReadyCal
                         pressure = dialog.findViewById(R.id.pressure);
                         temperature = dialog.findViewById(R.id.temperature);
                         gas = dialog.findViewById(R.id.gas);
-                        altitude = dialog.findViewById(R.id.altitude);
                         lastTimeUpdated = dialog.findViewById(R.id.lastUpdate);
-                        iaq = dialog.findViewById(R.id.iaq);
+                        progressBar = dialog.findViewById(R.id.progressBar);
 
                         close.setOnClickListener(new View.OnClickListener() {
                             @Override
@@ -88,14 +87,13 @@ public class GoogleMapActivity extends FragmentActivity implements OnMapReadyCal
                         pressure.setText(entry.pressure_ + " mmHg");
                         temperature.setText(entry.temperature_  + " *C");
                         gas.setText(entry.co2_ + "KOhms");
-                        altitude.setText(entry.altitude_ + " m");
                         lastTimeUpdated.setText(entry.lastUpdate_);
 
-                        String iaqScore = IAQProcessor.calculateIAQ(
+                        int iaqScore = IAQProcessor.calculateIAQ(
                                 Double.parseDouble(entry.humidity_),
                                 Double.parseDouble(entry.co2_));
 
-                        iaq.setText(iaqScore);
+                        progressBar.setProgress(iaqScore,true);
 
                         dialog.show();
                     }

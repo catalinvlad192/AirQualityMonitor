@@ -133,7 +133,6 @@ public class MainActivity extends AppCompatActivity
         foundDevicesAddresses_ = new ArrayList<String>();
         handler_ = new Handler();
 
-
         //Enable GPS
         LocationManager lm = (LocationManager)getApplicationContext()
                 .getSystemService(Context.LOCATION_SERVICE);
@@ -208,9 +207,9 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onDestroy()
     {
-       super.onDestroy();
-       realmWrapper.close();
-       unregisterReceiver(receiver);
+        super.onDestroy();
+        realmWrapper.close();
+        unregisterReceiver(receiver);
     }
 
     private void readFromDeviceViaBluetooth(int index)

@@ -2,32 +2,108 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="350dp"
-    android:layout_height="420dp"
+    android:layout_height="320dp"
     android:background="#006666"
     android:padding="5dp"
     android:layout_gravity="center">
 
-    <TextView
-        android:id="@+id/close"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:textColor="@color/common_google_signin_btn_text_dark"
-        android:text="X"
-        android:textStyle="bold"
-        android:layout_gravity="end"
+    <LinearLayout
+        android:background="#003333"
         android:gravity="center"
-        />
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        >
+
     <TextView
         android:id="@+id/device"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="30dp"
         android:textColor="#ffffff"
         android:background="#002255"
         android:text="Device"
         android:textStyle="bold"
-        android:layout_gravity="center"
         android:gravity="center"
         />
+        <TextView
+            android:id="@+id/close"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:textColor="@color/common_google_signin_btn_text_dark"
+            android:text="X"
+            android:textStyle="bold"
+            android:layout_gravity="end"
+            android:gravity="center"
+            />
+    </LinearLayout>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:background="#003333"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        >
+        <TextView
+            android:layout_width="55dp"
+            android:layout_height="15dp"
+            android:textColor="#000000"
+            android:background="#8a0a4a"
+            android:text="  Hazardous"
+            android:textSize="7dp"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="55dp"
+            android:layout_height="15dp"
+            android:text="  Very Unhealthy"
+            android:textSize="7dp"
+            android:textColor="#000000"
+            android:background="#800000"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="55dp"
+            android:layout_height="15dp"
+            android:text="  Unhealthy"
+            android:textSize="7dp"
+            android:textColor="#000000"
+            android:background="#cc3500"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="55dp"
+            android:layout_height="15dp"
+            android:text="  Moderate"
+            android:textSize="7dp"
+            android:textColor="#000000"
+            android:background="#969e00"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="55dp"
+            android:layout_height="15dp"
+            android:text="  Good"
+            android:textSize="7dp"
+            android:textColor="#000000"
+            android:background="#00129e"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:text="  Great"
+            android:textSize="7dp"
+            android:textColor="#000000"
+            android:background="#009e10"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+    </LinearLayout>
     <LinearLayout
         android:background="#003333"
         android:gravity="center"
@@ -148,33 +224,6 @@
             android:layout_height="50dp"
             android:textColor="#000000"
             android:background="#222255"
-            android:text="Altitude"
-            android:textSize="18dp"
-            android:padding="5dp"
-            android:layout_gravity="center"
-            android:gravity="center"/>
-        <TextView
-            android:id="@+id/altitude"
-            android:layout_width="175dp"
-            android:layout_height="50dp"
-            android:text="Value"
-            android:textSize="18dp"
-            android:textColor="#000000"
-            android:padding="5dp"
-            android:gravity="center"/>/>
-    </LinearLayout>
-    <LinearLayout
-        android:background="#003333"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        >
-        <TextView
-            android:layout_width="175dp"
-            android:layout_height="50dp"
-            android:textColor="#000000"
-            android:background="#222255"
             android:text="Last time updated"
             android:textSize="18dp"
             android:padding="5dp"
@@ -182,33 +231,6 @@
             android:gravity="center"/>
         <TextView
             android:id="@+id/lastUpdate"
-            android:layout_width="175dp"
-            android:layout_height="50dp"
-            android:text="Value"
-            android:textSize="18dp"
-            android:textColor="#000000"
-            android:padding="5dp"
-            android:gravity="center"/>/>
-    </LinearLayout>
-    <LinearLayout
-        android:background="#003333"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        >
-        <TextView
-            android:layout_width="175dp"
-            android:layout_height="50dp"
-            android:textColor="#000000"
-            android:background="#222255"
-            android:text="IAQ"
-            android:textSize="18dp"
-            android:padding="5dp"
-            android:layout_gravity="center"
-            android:gravity="center"/>
-        <TextView
-            android:id="@+id/iaq"
             android:layout_width="175dp"
             android:layout_height="50dp"
             android:text="Value"
