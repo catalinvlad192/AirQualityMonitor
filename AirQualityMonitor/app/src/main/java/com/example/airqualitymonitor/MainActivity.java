@@ -133,6 +133,9 @@ public class MainActivity extends AppCompatActivity
         foundDevicesAddresses_ = new ArrayList<String>();
         handler_ = new Handler();
 
+        Intent serviceIntent = new Intent(this, NotificationService.class);
+        startService(serviceIntent);
+
         //Enable GPS
         LocationManager lm = (LocationManager)getApplicationContext()
                 .getSystemService(Context.LOCATION_SERVICE);

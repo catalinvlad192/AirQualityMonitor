@@ -15,6 +15,9 @@
         android:roundIcon="@drawable/button_round1_no_bg"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+        <service
+            android:name=".NotificationService"
+            android:exported="false"></service>
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
